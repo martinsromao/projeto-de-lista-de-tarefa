@@ -1,9 +1,9 @@
 /* Global styles */
 :root {
-  --purple-light: #DDD2EF;
+  --purple-light: #d4c2ee;
   --purple-base: #9359F3;
   --purple-dark: #6F3CC3;
-  --green-light: #BFE3D0;
+  --green-light: #b8e2cc;
   --green-base: #479C6E;
   --green-dark: #2D6C4A;
   --gray-100: #F0EDF2;
@@ -19,7 +19,7 @@
 --input:400 16px/140% ;
 --button:700 14px/140%;
 --subtitle:600 14px/120%;
---tag:700 12px/120%;
+--tag:700 12px/120% ;
 --text-md:400 14px/140%;
 --text-md-done:400 14px/140%;
 --text-sm:400 12px/140%;

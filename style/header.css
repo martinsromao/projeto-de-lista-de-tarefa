@@ -41,6 +41,7 @@ header{
     border: none;
     cursor: pointer;
     border-radius: 8px;
+    font: var(--button) var(--font-family);
   }
   img{
     width: 20px;
