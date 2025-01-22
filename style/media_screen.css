@@ -1,0 +1,22 @@
+@media screen and (max-width: 1279px) {
+  .contender{
+    margin: 0;
+    padding-inline: 5%;
+  }
+}
+@media screen and (max-width: 500px) {
+  header{
+    padding: 2%;
+    .logo{
+     img{
+      width: 150px;
+      height: 150px;
+    }
+    img[src*="logo3"]{
+      width: 100px;
+      height: 100px;
+    } 
+    }
+    
+  }
+}
