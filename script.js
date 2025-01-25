@@ -4,12 +4,13 @@ const input = document.getElementById("input")
 const TarefaCriada = document.getElementById("tarefa_criada")
 const TarefaConcluida = document.getElementById("tarefa_concluida")
 const lista = document.querySelector("#list")
+const empty = document.querySelector(".empty")
 
 let valorTarefa = 0; // Variável global para contar tarefas concluídas
 
 form.addEventListener("submit", function (event) {
   event.preventDefault();
-
+  empty.style = "display:none"
   let lis = document.createElement("li")
   let imgCheck = document.createElement("img")
   imgCheck.src = "assets/CircleDuotone.png";
@@ -46,14 +47,23 @@ form.addEventListener("submit", function (event) {
     isChecked = !isChecked; // Alterna o estado
   });
 
+  // Evento para remover a tarefa
+  imgTrash.addEventListener("click", function (event) {
+    const itemRemover = event.target.closest("li");
+
+    // Se a tarefa estava concluída, decrementa a contagem de concluídas
+    if (isChecked) {
+      valorTarefa--;
+      TarefaConcluida.textContent = valorTarefa;
+    }
+
+    // Remove o item da lista
+    itemRemover.remove();
+
+    // Atualiza o número de tarefas criadas
+    TarefaCriada.textContent = lista.children.length;
+  });
+
   // Limpa o campo de input
   input.value = "";
-
-  // Tratamento de erro opcional
-  try {
-    const item = lista.children;
-    TarefaCriada.textContent = `${item.length}`;
-  } catch (error) {
-    console.log(error);
-  }
 });
