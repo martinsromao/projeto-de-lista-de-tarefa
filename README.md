@@ -1,4 +1,4 @@
-##Lista de Tarefas
+# Lista de Tarefas
 Este é um projeto simples de uma lista de tarefas, onde você pode adicionar, marcar como concluídas e remover tarefas. O projeto utiliza HTML, CSS e JavaScript.
 
 ## Estrutura do Projeto
